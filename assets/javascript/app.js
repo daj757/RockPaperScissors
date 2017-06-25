@@ -41,7 +41,7 @@ $('#myModal').modal('show');
    
    fireBase.ref().set({
     players: players,
-    
+    playerNumber: playerNumber
   });
 fireBase.ref().update({"ties_Score": ties});
  //Collect name info from modal
@@ -94,7 +94,7 @@ fireBase.ref().update({"ties_Score": ties});
  		fireBase.ref().update({choice_1: "true"});
  		$("#nameSpace").text("You choose rock... waiting for opponent");
  	}
- 	else if (playerNumber === 2) {
+ 	 else if (playerNumber === 2) {
  		fireBase.ref().update({playerTwo_choice: "rock"});
  		fireBase.ref().update({choice_2: "true"});
  		$("#nameSpace").text("You choose rock... waiting for opponent");
@@ -208,12 +208,12 @@ function game(one, two){
 	fireBase.ref().update({"ties_Score": ties});
 	   if(playerNumber=== 1){
    		$("#nameSpace").text("It's a tie!")
-   	
+   		
    	}
    		 else if(playerNumber===2){
    		$("#nameSpace").text("It's a tie!")
    		}
-   
+      console.log(playerNumber);
    }
 
    // Wins and losses
@@ -223,7 +223,7 @@ function game(one, two){
    		if(playerNumber === 1){
    		$("#nameSpace").text("Opponent chose paper. You lose!")
    	}
-   	   else if(playerNumber === 2){
+   	    if(playerNumber === 2){
    		$("#nameSpace").text("Opponent chose rock. You win!")
    		}
    		playerOne.losses ++
