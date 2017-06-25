@@ -1,5 +1,85 @@
-img { margin-top: 50px; }
+body {
+	font-family: 'Frijole', cursive;
+	background-image: url("../images/arena.jpg");
+	background-size: cover;
+	color: red;
 
-h1, h3 {
+	}
+img { 
+	
+    height: 190px;
+	width: 180px;
+ }
+ p {
+ 	font-size: 12pt;
+ }
+ img:hover {
+ 	border-style: solid;
+ 	border-width: 4px;
+ 	border-color: red;
+
+ }
+
+h1, h3, h4 {
 	text-align: center;
+}
+#header1 {
+	background-color: black;
+	margin-bottom: 20px;
+}
+#rockW {
+	text-align: center;
+}
+#scissorW {
+	text-align: center;
+}
+#paperW {
+	text-align: center;
+}
+#msg-container {
+	height: 400px;
+	background-color: black;
+	color: red;
+	border-radius: 15px;
+}
+.panel-default {
+	height: 400px;
+	background-color: black;
+	color: red;
+	border-radius: 10px;
+}
+#myModal {
+	margin-top: 50px;
+	margin-left: 70px;
+	margin-right: 70px;
+	color: red;
+
+}
+.modal-content {
+	background-color: black;
+}
+#usermsg {
+	width:100%;
+}
+#submitmsg {
+	width:100%;
+}
+.panel-footer {
+	background-color: black;
+}
+#p1Score {
+	color: blue;
+}
+#p2Score {
+	color:blue;
+}
+#tieDisplay {
+	color:white;
+}
+#writeSpace {
+	background-color: black;
+	border-radius: 5px;
+	border-style: solid;
+	border-width:1px;
+	border-color: white;
 }
