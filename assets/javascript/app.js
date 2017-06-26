@@ -91,26 +91,26 @@ fireBase.ref().update({"ties_Score": ties});
  $("#rock").on("click", function(){
  	if(playerNumber === 1) {
  		fireBase.ref().update({playerOne_choice: "rock"});
- 		fireBase.ref().update({choice_1: "true"});
  		$("#nameSpace").text("You choose rock... waiting for opponent");
+ 		fireBase.ref().update({choice_1: "true"});
  	}
  	 else if (playerNumber === 2) {
  		fireBase.ref().update({playerTwo_choice: "rock"});
- 		fireBase.ref().update({choice_2: "true"});
  		$("#nameSpace").text("You choose rock... waiting for opponent");
+ 		fireBase.ref().update({choice_2: "true"});
  	}
  }) 
 
  $("#paper").on("click", function(){
  	if(playerNumber == 1) {
  		fireBase.ref().update({playerOne_choice: "paper"});
- 		fireBase.ref().update({choice_1: "true"});
  		$("#nameSpace").text("You choose paper... waiting for opponent");
+ 		fireBase.ref().update({choice_1: "true"});
  	}
  	else if (playerNumber == 2) {
  		fireBase.ref().update({playerTwo_choice: "paper"});
- 		fireBase.ref().update({choice_2: "true"});
  		$("#nameSpace").text("You choose paper... waiting for opponent");
+ 		fireBase.ref().update({choice_2: "true"});
  		
  	}
  }) 
@@ -118,13 +118,13 @@ fireBase.ref().update({"ties_Score": ties});
  $("#scissors").on("click", function(){
  	if(playerNumber == 1) {
  		fireBase.ref().update({playerOne_choice: "scissors"});
- 		fireBase.ref().update({choice_1: "true"});
  		$("#nameSpace").text("You choose scissors... waiting for opponent");
+ 		fireBase.ref().update({choice_1: "true"});
  	}
  	else if (playerNumber == 2) {
  		fireBase.ref().update({playerTwo_choice: "scissors"});
- 		fireBase.ref().update({choice_2: "true"});
  		$("#nameSpace").text("You choose scissors... waiting for opponent");
+ 		fireBase.ref().update({choice_2: "true"});
  	}
  }) 
 
@@ -187,7 +187,7 @@ fireBase.ref().on("value", function(snapshot) {
     $('#msg-container').append(snapshot.val().player2_msg);
     $("#tieDisplay").html("Ties: " + ties);
     if (choice1 == "true" && choice2 == "true") {
-    	console.log("begins");
+    	
     	game(playerOne.choice, playerTwo.choice);
     }
 
